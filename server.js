@@ -1,7 +1,9 @@
 const express = require('express')
 const expressEjsLayouts = require('express-ejs-layouts')
-const {startingAndSync, sequelize} = require("./database/config")
-const { Product } = require('./database/models')
+const {startingAndSync} = require("./database/config")
+const HomeRouter = require("./routers/home")
+const AccountRouter = require("./routers/account")
+const session = require('express-session')
 
 // EXPRESS SERVER & EJS
 var server = express()
@@ -9,25 +11,19 @@ server.set("view engine", "ejs")
 server.set("views", "./views")
 server.use(expressEjsLayouts)
 
+// SESSION
+server.use(session({
+  secret: "HelloWorldThisIsPhatcraftShopSecret",
+  resave: false,
+  saveUninitialized: false
+}))
+
 // DATABASE
 startingAndSync()
 
-// ROUTES
-server.get("/", async (req, res) => {
-  const products = await Product.findAll({
-    order: sequelize.literal("RAND()"),
-    limit: 4
-  })
-  res.render("home", {page: "home", products: products})
-})
-
-server.get("/login", (req, res) => {
-  res.render("login", {page: "account"})
-})
-
-server.get("/signup", (req, res) => {
-  res.render("signup", {page: "account"})
-})
+// ROUTERS
+server.use("/", HomeRouter)
+server.use("/account", AccountRouter)
 
 // RUN SERVER
 server.listen(
