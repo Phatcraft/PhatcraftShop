@@ -42,13 +42,16 @@
   .action .add-cart{
     background-color: green;
   }
+  .star{
+    color: yellow;
+  }
 </style>
 <div class="product">
   <h2><%= product.name %></h2>
   <div class="product-info">
     <p><strong>Thông tin:</strong> <%= product.info %></p>
     <p><strong>Giá:</strong> <span class="price"><%= product.price %></span></p>
-    <p><strong>Đánh giá:</strong> 0/5 <i class="bi bi-star-fill"></i></p>
+    <p><strong>Đánh giá:</strong> 0/5 <i class="bi bi-star-fill star"></i></p>
   </div>
   <div class="action">
     <a href="" class="buy">Mua ngay</a>
