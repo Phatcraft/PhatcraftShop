@@ -1,14 +1,38 @@
 <style>
   .product{
     background-color: white;
-    width: 250px;
+    width: 300px;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px;
     margin: 10px;
+  }
+  .product h2{
+    margin: 0;
+  }
+  .action{
+    margin: 10px 0px;
+    display: flex;
+  }
+  .action a{
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 0px 5px;
+  }
+  .action .buy{
+    background-color: red;
+  }
+  .action .add-cart{
+    background-color: green;
   }
 </style>
 <div class="product">
-  <h2><%= product.productName %></h2>
-  <p><%= product.productInfo %></p>
-  <p>Giá: <span class="price"><%= product.productPrice %></span></p>
+  <h2><%= product.name %></h2>
+  <p><%= product.info %></p>
+  <p>Giá: <span class="price"><%= product.price %></span></p>
+  <div class="action">
+    <a href="" class="buy">Mua ngay</a>
+    <a href="" class="add-cart">Thêm vào giỏ hàng</a>
+  </div>
 </div>
