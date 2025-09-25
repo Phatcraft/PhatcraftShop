@@ -5,6 +5,13 @@
     padding: 20px;
     border-radius: 10px;
   }
+  .welcome .login{
+    background-color: var(--primary);
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    border-radius: 10px;
+  }
   .product-icon{
     color: white;
     margin: 100px 20px;
@@ -15,10 +22,23 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+
+  footer{
+    background-color: white;
+    margin-top: 100px;
+    padding: 20px;
+  }
+  footer h2{
+    margin: 0;
+  }
+  footer p{
+    margin: 10px;
+  }
 </style>
 <main>
   <div class="welcome">
     <h2>Chào mừng đến với Phatcraft Shop</h2>
+    <a href="/login" class="login">Tham gia ngay</a>
   </div>
 
   <h2 class="product-icon">Các sản phẩm tiêu biểu</h2>
@@ -28,3 +48,9 @@
     <% } %>
   </div>
 </main>
+
+<footer>
+  <h2>Phatcraft Shop</h2>
+  <p>Được tạo bởi Phatcraft</p>
+  <p>Email liên hệ: phathong0727@gmail.com</p>
+</footer>
