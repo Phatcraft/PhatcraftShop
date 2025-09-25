@@ -1,0 +1,30 @@
+<style>
+  .welcome{
+    background-color: white;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  .product-icon{
+    color: white;
+    margin: 100px 20px;
+    margin-bottom: 10px;
+  }
+  .products{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+</style>
+<main>
+  <div class="welcome">
+    <h2>Chào mừng đến với Phatcraft Shop</h2>
+  </div>
+
+  <h2 class="product-icon">Các sản phẩm tiêu biểu</h2>
+  <div class="products">
+    <% for(let product of products) { %>
+      <%- include('./components/product.ejs', {product: product}) %>
+    <% } %>
+  </div>
+</main>
