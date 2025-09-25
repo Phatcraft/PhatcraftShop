@@ -6,19 +6,22 @@ const sequelize = new Sequelize({
   port: 3306,
   username: 'root',
   password: '',
-  database: 'phatcraftshop'
+  database: 'phatcraftshop',
+  logging: false
 })
 
 function startingAndSync(){
   // Starting
   sequelize.authenticate()
-  .then(() => console.log("Database: CONNECTED"))
-  .catch(err => console.log("Database: FAILED"))
+  .then(() => console.log("Connect database: SUCCESS"))
+  .catch(err => console.log("Connect database: FAILED"))
+
+  require("./models")
 
   // Syncing
   sequelize.sync()
-  .then(() => console.log("Sync models: SUCCESS"))
-  .catch(err => console.log("Sync models: FAILED"))
+  .then(() => console.log("     Sync models: SUCCESS"))
+  .catch(err => console.log("     Sync models: FAILED"))
 }
 
 module.exports = {sequelize, startingAndSync}
