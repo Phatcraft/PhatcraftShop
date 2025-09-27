@@ -1,6 +1,7 @@
 const { sequelize } = require("./config");
 const {DataTypes} = require("sequelize")
 
+// Product model
 const Product = sequelize.define('Product', {
   productID: {
     type: DataTypes.STRING,
@@ -15,4 +16,29 @@ const Product = sequelize.define('Product', {
   timestamps: false
 })
 
-module.exports = {Product}
+// User model
+const User = sequelize.define('User', {
+  userID:{
+    type: DataTypes.UUID,
+    primaryKey: true,
+    allowNull: false,
+    defaultValue: DataTypes.UUIDV4
+  },
+  username:{
+    type: DataTypes.STRING,
+    unique: true,
+    allowNull: false
+  },
+  email:{
+    type: DataTypes.STRING,
+    unique: true,
+    allowNull: false
+  },
+  password: DataTypes.STRING,
+  rule: {
+    type: DataTypes.ENUM("ADMIN", "USER"),
+    defaultValue: "USER"
+  }
+})
+
+module.exports = {Product, User}
