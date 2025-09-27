@@ -60,13 +60,31 @@
     <h2>Đăng nhập</h2>
     <div class="input">
       <i class="bi bi-person-fill"></i>
-      <input type="text" name="username" placeholder="Tên tài khoản">
+      <input type="text" name="username" placeholder="Tên tài khoản" required>
     </div>
     <div class="input">
       <i class="bi bi-key-fill"></i>
-      <input type="password" name="password" placeholder="Mật khẩu">
+      <input type="password" name="password" placeholder="Mật khẩu" required>
     </div>
     <button type="submit">Đăng nhập</button>
     <p>Chưa có tài khoản? <a href="/account/signup">Đăng ký ngay</a></p>
   </form>
 </main>
+
+<script>
+  var form = document.getElementById("form")
+  form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    var formData = new FormData(form)
+
+    // Get data
+    var username = formData.get("username")
+    var password = formData.get("password")
+
+    // Fetch here
+    
+
+    alert(`Chào mừng trở lại Phatcraft Shop, ${username}`)
+    location.replace("/")
+  })
+</script>

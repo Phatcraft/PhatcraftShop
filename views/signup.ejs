@@ -78,3 +78,29 @@
     <p>Đã có tài khoản? <a href="/account/login">Đăng nhập ngay</a></p>
   </form>
 </main>
+
+<script>
+  var form = document.getElementById("form")
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault()
+    var formData = new FormData(form)
+
+    // Get datas
+    var username = formData.get("username")
+    var email = formData.get("email")
+    var password = formData.get("password")
+    var confirm = formData.get("confirm-password")
+
+    // Check password and confirm password
+    if(password != confirm){
+      alert("Mật khẩu và xác nhận mật khẩu không khớp. Vui lòng thử lại")
+      return
+    }
+
+    // Fetch API
+
+    alert(`Chào mừng đến với Phatcraft Shop, ${username}`)
+    location.replace("/")
+  })
+</script>
