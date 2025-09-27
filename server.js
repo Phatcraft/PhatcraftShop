@@ -4,12 +4,14 @@ const {startingAndSync} = require("./database/config")
 const HomeRouter = require("./routers/home")
 const AccountRouter = require("./routers/account")
 const session = require('express-session')
+const ApiRouter = require('./routers/api')
 
 // EXPRESS SERVER & EJS
 var server = express()
 server.set("view engine", "ejs")
 server.set("views", "./views")
 server.use(expressEjsLayouts)
+server.use(express.json())
 
 // SESSION
 server.use(session({
@@ -24,6 +26,7 @@ startingAndSync()
 // ROUTERS
 server.use("/", HomeRouter)
 server.use("/account", AccountRouter)
+server.use("/api", ApiRouter)
 
 // RUN SERVER
 server.listen(
