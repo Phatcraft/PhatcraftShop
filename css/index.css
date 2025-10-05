@@ -1,0 +1,7 @@
+@import url("./variables.css");
+@import url("./nav-bar.css");
+
+body{
+  background-color: var(--primary);
+  margin: 0;
+}
