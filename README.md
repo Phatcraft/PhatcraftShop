@@ -1,2 +1,0 @@
-# PhatcraftShop
-Phatcraft Shop Server
