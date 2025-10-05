@@ -9,13 +9,13 @@ nav h1{
 }
 nav .nav-list{
   margin-top: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 5px;
 }
 nav .nav-list a{
   color: white;
   font-size: 20px;
   margin: 0px 3px;
-  padding: 5px 20px;
+  padding: 3px 20px;
   background-color: var(--secondary);
   border-radius: 10px;
 }
@@ -25,7 +25,7 @@ nav .nav-list a:hover{
 nav .nav-list .choose{
   background-color: var(--primary);
   border-radius: 10px 10px 0px 0px;
-  padding: 9px 20px;
+  padding: 6px 20px;
 }
 nav .nav-list .choose:hover{
   opacity: 1;
