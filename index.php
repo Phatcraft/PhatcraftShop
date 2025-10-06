@@ -14,4 +14,5 @@
     <p>Bạn có thể mua sắm các sản phẩm với giá cả phải chăng nhất tại đây</p>
   </div>
 </body>
+<?php include "./database/database.php" ?>
 </html>
