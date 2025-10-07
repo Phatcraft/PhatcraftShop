@@ -8,17 +8,31 @@
   <title>Trang chủ | Phatcraft Shop</title>
 </head>
 <body>
+  <!-- Navigation bar -->
   <nav class="nav-bar">
     <h3>Phatcraft Shop</h3>
     <div class="nav-list">
-      <a href="" class="choose" title="Trang chủ"><i class="bi bi-house-fill"></i></a>
+      <a href="/" class="choose" title="Trang chủ"><i class="bi bi-house-fill"></i></a>
       <a href="" class="normal" title="Cửa hàng"><i class="bi bi-bag-fill"></i></a>
       <a href="" class="normal" title="Tài khoản"><i class="bi bi-person-fill"></i></a>
       <a href="" class="normal cart" title="Giỏ hàng">
         <i class="bi bi-cart-fill"></i>
-        <div class="amount">110</div>
+        <div class="amount">
+          <p>0</p>
+        </div>
       </a>
     </div>
   </nav>
+
+  <!-- Main page -->
+  <main>
+    <div class="welcome">
+      <h2>Chào mừng đến với Phatcraft Shop</h2>
+      <p>Bạn có thể mua sắm hàng hóa với giá cả phải chăng nhất tại đây</p>
+    </div>
+
+  </main>
 </body>
 </html>
+
+<script src="./scripts/currency.js"></script>
