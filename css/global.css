@@ -1,0 +1,63 @@
+:root{
+  --primary: steelblue;
+  --secondary: lightblue;
+}
+body{
+  background-color: var(--primary);
+  margin: 0;
+}
+
+/* Navigation bar */
+nav{
+  background-color: white;
+  padding: 20px;
+  text-align: center;
+  padding-bottom: 0px;
+}
+nav h3{
+  margin: 0;
+  font-size: 25px;
+}
+nav .nav-list{
+  margin: 20px 0px;
+  margin-bottom: 0px;
+  display: flex;
+  justify-content: center;
+}
+nav .nav-list .normal{
+  width: 50px;
+  background-color: var(--secondary);
+  text-decoration: none;
+  padding: 5px 20px;
+  border-radius: 20px;
+  margin: 5px 4px;
+  display: flex;
+  place-content: center;
+}
+nav .nav-list .cart{
+  position: relative;
+}
+.amount{
+  position: absolute;
+  background-color: red;
+  color: white;
+  right: 5px;
+  top: 5px;
+  padding: 2px 10px;
+  border-radius: 100%;
+  font-size: 12px;
+}
+nav .nav-list a i{
+  font-size: 20px;
+  color: white;
+}
+nav .nav-list .choose{
+  width: 50px;
+  background-color: var(--primary);
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 20px 20px 0px 0px;
+  margin: 0px 4px;
+  display: flex;
+  place-content: center;
+}
