@@ -10,4 +10,8 @@
     <h2><?php echo $name ?></h2>
     <p>Giá: <span class="price"><?php echo $price ?></span></p>
   </div>
+  <div class="action-bar">
+    <a href="" class="buy">Mua ngay</a>
+    <a href="" class="see-more">Xem thêm</a>
+  </div>
 </div>
