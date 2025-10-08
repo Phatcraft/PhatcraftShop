@@ -3,22 +3,44 @@
   background-color: white;
   margin: 10px;
   border-radius: 10px;
-  padding: 5px;
+  padding: 2px;
 }
 .product img{
   width: 200px;
   margin: 10px;
-  border: 1px solid black;
-  border-radius: 10px;
-  margin-bottom: 5px;
+  border-radius: 10px 10px 0px 0px;
+  margin-bottom: 0px;
 }
 .product .product-info{
   margin: 10px;
   background-color: var(--secondary);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 0px 0px 10px 10px;
   color: white;
+  margin-top: 0px;
+  padding-bottom: 20px;
 }
 .product .product-info h2{
   margin: 0;
+}
+.product .action-bar{
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 2px;
+}
+.product .action-bar a{
+  width: 50%;
+  margin: 2px 2px;
+  text-decoration: none;
+  color: white;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+.product .action-bar .buy{
+  background-color: red;
+}
+.product .action-bar .see-more{
+  background-color: green;
 }

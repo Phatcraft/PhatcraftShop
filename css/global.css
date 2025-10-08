@@ -1,8 +1,8 @@
 @import url("./product-card.css");
 
 :root{
-  --primary: steelblue;
-  --secondary: lightblue;
+  --primary: #20568a;
+  --secondary: #4f9de8;
 }
 body{
   background-color: var(--primary);
@@ -82,4 +82,16 @@ nav .nav-list a i{
   padding: 20px;
   margin: 20px 10px;
   border-radius: 20px;
+}
+
+/* Random products */
+.products h1{
+  color: white;
+  text-align: center;
+  margin-top: 100px;
+}
+.products .products-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
