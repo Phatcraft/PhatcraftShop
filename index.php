@@ -42,18 +42,26 @@
 
           while($product = mysqli_fetch_assoc($products)){
             $name = $product['name'];
-              $price = $product["price"];
-              $image_path = $product["image_path"];
-              include "./components/product-card.php";
+            $price = $product["price"];
+            $image_path = $product["image_path"];
+            include "./components/product-card.php";
           }
-
-          mysqli_close($conn)
         ?>
       </div>
     </div>
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <h2>Phatcraft Shop</h2>
+    <p>Được tạo bởi Phatcraft</p>
+    <p>Email: phathong0727@gmail.com</p>
+  </footer>
 </body>
 </html>
 
 <!-- Change currency -->
 <script src="./scripts/currency.js"></script>
+
+<!-- Close MySQL connection -->
+<?php mysqli_close($conn) ?>
