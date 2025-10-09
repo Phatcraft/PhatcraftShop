@@ -14,7 +14,7 @@
     <p>Giá: <span class="price"><?php echo $price ?></span></p>
   </div>
   <div class="action-bar">
-    <a href="" class="buy">Mua ngay</a>
-    <a href="" class="see-more">Xem thêm</a>
+    <a href="" class="buy" title="Mua ngay"><i class="bi bi-cart-fill"></i></a>
+    <a href="" class="see-more" title="Xem thêm"><i class="bi bi-arrow-right-circle"></i></a>
   </div>
 </div>
