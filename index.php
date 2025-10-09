@@ -37,19 +37,58 @@
       <h1>Các sản phẩm tiêu biểu</h1>
       <div class="products-list">
         <?php
-          $sql = "SELECT * FROM products ORDER BY RAND() LIMIT 3";
+          $sql = "SELECT
+          products.`productID` as productID, products.name as name, products.price as price, products.image_path as image_path,
+          tags.name as tagName, tags.color as color
+          FROM products JOIN tags ON products.`tagID` = tags.`tagID`
+          ORDER BY RAND() LIMIT 3";
+
           $products = mysqli_query($conn, $sql);
 
           while($product = mysqli_fetch_assoc($products)){
             $name = $product['name'];
             $price = $product["price"];
             $image_path = $product["image_path"];
+            $tag = $product["tagName"];
+            $color = $product["color"];
             include "./components/product-card.php";
           }
         ?>
       </div>
     </div>
   </main>
+
+  <!-- Sales -->
+  <div class="sales">
+    <h1>Chương trình khuyến mãi</h1>
+    <div class="sale-list">
+      <?php
+        $sql = "SELECT 
+        ROUND(sales.`saleValue`*100) as saleValue, tags.name as name, sales.`dateCreated` as date,
+        tags.color as color
+        FROM sales JOIN tags ON sales.`tagID` = tags.`tagID`
+        WHERE sales.`isActive` = 1
+        ORDER BY RAND()
+        LIMIT 3";
+
+        $result = mysqli_query($conn, $sql);
+        while($sale = mysqli_fetch_assoc($result)){
+          $saleValue = $sale["saleValue"];
+          $tagName = $sale["name"];
+          $date = $sale["date"];
+          $color = $sale["color"];
+          include "./components/sale.php";
+        }
+      ?>
+      <div class="sale">
+        <div class="sale-badge"></div>
+        <div class="sale-info">
+          <p class="name">Xem thêm</p>
+          <p>Xem thêm các khuyến mãi tại <a href="" style="color: black">đây</a></p>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- Footer -->
   <footer>
@@ -62,6 +101,8 @@
 
 <!-- Change currency -->
 <script src="./scripts/currency.js"></script>
+<!-- Format date -->
+<script src="./scripts/date.js"></script>
 
 <!-- Close MySQL connection -->
 <?php mysqli_close($conn) ?>
