@@ -76,6 +76,7 @@ nav .nav-list a i{
 }
 
 
+
 /* Welcome */
 .welcome{
   background-color: white;
@@ -84,14 +85,29 @@ nav .nav-list a i{
   border-radius: 20px;
 }
 
+
 /* Random products */
 .products h1{
   color: white;
   text-align: center;
-  margin-top: 100px;
+  margin-top: 150px;
 }
 .products .products-list{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+
+/* Footer */
+footer{
+  background-color: white;
+  padding: 20px;
+  margin-top: 150px;
+}
+footer h2{
+  margin: 10px 0px;
+}
+footer p{
+  margin: 10px 15px;
 }
