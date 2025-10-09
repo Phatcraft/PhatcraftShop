@@ -44,3 +44,10 @@
 .product .action-bar .see-more{
   background-color: green;
 }
+.product .product-info .tag{
+  padding: 5px 10px;
+  width: fit-content;
+  border-radius: 20px;
+  font-size: 13px;
+  margin: 5px 0px;
+}

@@ -1,4 +1,5 @@
 @import url("./product-card.css");
+@import url("./sale.css");
 
 :root{
   --primary: #20568a;
@@ -96,6 +97,20 @@ nav .nav-list a i{
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+}
+
+/* Sales */
+.sales{
+  text-align: center;
+  margin-top: 150px;
+}
+.sales h1{
+  color: white;
+}
+.sales .sale-list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 
