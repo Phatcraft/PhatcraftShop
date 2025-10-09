@@ -72,20 +72,49 @@
         LIMIT 3";
 
         $result = mysqli_query($conn, $sql);
-        while($sale = mysqli_fetch_assoc($result)){
-          $saleValue = $sale["saleValue"];
-          $tagName = $sale["name"];
-          $date = $sale["date"];
-          $color = $sale["color"];
-          include "./components/sale.php";
+        if(mysqli_num_rows($result) > 0){
+          while($sale = mysqli_fetch_assoc($result)){
+            $saleValue = $sale["saleValue"];
+            $tagName = $sale["name"];
+            $date = $sale["date"];
+            $color = $sale["color"];
+            include "./components/sale.php";
+          }
+          echo "
+          <div class='sale'>
+            <div class='sale-badge'></div>
+              <div class='sale-info'>
+                <p class='name'>Xem thêm</p>
+                <p>Xem thêm các khuyến mãi tại <a href='' style='color: black'>đây</a></p>
+              </div>
+            </div>
+          </div>";
+        }else{
+          echo "
+          <div class='sale'>
+            <div class='sale-badge'></div>
+              <div class='sale-info'>
+                <p class='name'>Không có khuyến mãi</p>
+                <p>Không có khuyến mãi khả dụng hiện tại</p>
+              </div>
+            </div>
+          </div>";
         }
       ?>
-      <div class="sale">
-        <div class="sale-badge"></div>
-        <div class="sale-info">
-          <p class="name">Xem thêm</p>
-          <p>Xem thêm các khuyến mãi tại <a href="" style="color: black">đây</a></p>
-        </div>
+      
+  </div>
+
+  <!-- Account -->
+  <div class="accounts">
+    <h1>Bắt đầu với Phatcraft Shop</h1>
+    <div class="account-list">
+      <div class="account">
+        <i class="bi bi-person-lock"></i>
+        <p>Đăng nhập tài khoản tại <a href="">đây</a></p>
+      </div>
+      <div class="account">
+        <i class="bi bi-person-plus"></i>
+        <p>Tạo tài khoản mới tại <a href="">đây</a></p>
       </div>
     </div>
   </div>
