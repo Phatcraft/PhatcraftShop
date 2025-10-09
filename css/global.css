@@ -2,13 +2,19 @@
 @import url("./sale.css");
 
 :root{
-  --primary: #20568a;
-  --secondary: #4f9de8;
+  --primary: #0fa33e;
+  --secondary: #4db06d;
 }
 body{
   background-color: var(--primary);
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+body::-webkit-scrollbar{
+  width: 10px;
+}
+body::-webkit-scrollbar-thumb{
+  background-color: white;
 }
 
 /* Navigation bar */
@@ -113,6 +119,33 @@ nav .nav-list a i{
   justify-content: center;
 }
 
+
+/* Account */
+.accounts{
+  text-align: center;
+  margin-top: 150px;
+}
+.accounts h1{
+  color: white;
+}
+.accounts .account-list{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.account-list .account{
+  background-color: white;
+  width: 400px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 20px;
+}
+.account-list .account i{
+  font-size: 30px;
+}
+.account-list .account p a{
+  color: black;
+}
 
 /* Footer */
 footer{

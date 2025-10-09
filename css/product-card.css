@@ -30,7 +30,6 @@
   padding-top: 2px;
 }
 .product .action-bar a{
-  width: 50%;
   margin: 2px 2px;
   text-decoration: none;
   color: white;
@@ -39,10 +38,23 @@
   text-align: center;
 }
 .product .action-bar .buy{
+  width: 80%;
   background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .product .action-bar .see-more{
+  width: 20%;
   background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .action-bar .see-more i,
+.product .action-bar .buy i
+{
+  font-size: 20px;
 }
 .product .product-info .tag{
   padding: 5px 10px;
@@ -50,4 +62,5 @@
   border-radius: 20px;
   font-size: 13px;
   margin: 5px 0px;
+  border: 2px solid white;
 }
