@@ -1,4 +1,7 @@
+<!-- Thêm database connection -->
 <?php include("./database.php") ?>
+
+<!-- HTML -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,20 +13,7 @@
 </head>
 <body>
   <!-- Navigation bar -->
-  <nav class="nav-bar">
-    <h3>Phatcraft Shop</h3>
-    <div class="nav-list">
-      <a href="/" class="choose" title="Trang chủ"><i class="bi bi-house-fill"></i></a>
-      <a href="" class="normal" title="Cửa hàng"><i class="bi bi-bag-fill"></i></a>
-      <a href="" class="normal" title="Tài khoản"><i class="bi bi-person-fill"></i></a>
-      <a href="" class="normal cart" title="Giỏ hàng">
-        <i class="bi bi-cart-fill"></i>
-        <div class="amount">
-          <p>0</p>
-        </div>
-      </a>
-    </div>
-  </nav>
+  <?php $page = "home"; include "./components/nav-bar.php"?>
 
   <!-- Main page -->
   <main>
@@ -114,7 +104,7 @@
       </div>
       <div class="account">
         <i class="bi bi-person-plus"></i>
-        <p>Tạo tài khoản mới tại <a href="">đây</a></p>
+        <p>Tạo tài khoản mới tại <a href="./signup.php">đây</a></p>
       </div>
     </div>
   </div>
