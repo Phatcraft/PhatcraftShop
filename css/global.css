@@ -17,6 +17,8 @@ body::-webkit-scrollbar-thumb{
   background-color: white;
 }
 
+
+/* index.php */
 /* Navigation bar */
 nav{
   background-color: white;
@@ -158,4 +160,45 @@ footer h2{
 }
 footer p{
   margin: 10px 15px;
+}
+
+
+
+
+/* Login.php - Signup.php */
+.main-form{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  text-align: center;
+}
+.main-form form{
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+.main-form form h2{
+  margin: 10px;
+}
+.main-form form .input{
+  margin: 10px;
+  border: 1px solid black;
+  padding: 7px;
+  border-radius: 10px;
+}
+.main-form form input{
+  border: 0;
+  outline: 0;
+  padding: 5px;
+  border-radius: 10px;
+}
+.main-form form p a{
+  color: black;
+}
+.main-form form input[type="submit"]{
+  background-color: red;
+  color: white;
+  padding: 10px 40px;
+  margin: 10px 0px;
+  border-radius: 10px;
 }
