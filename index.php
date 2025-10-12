@@ -1,5 +1,6 @@
 <!-- Thêm database connection -->
 <?php include("./database.php") ?>
+<?php session_start() ?>
 
 <!-- HTML -->
 <!DOCTYPE html>
@@ -18,8 +19,16 @@
   <!-- Main page -->
   <main>
     <div class="welcome">
-      <h2>Chào mừng đến với Phatcraft Shop</h2>
-      <p>Bạn có thể mua sắm hàng hóa với giá cả phải chăng nhất tại đây</p>
+      <?php
+        if(empty($_SESSION["user"])){
+          echo "<h2>Chào mừng đến với Phatcraft Shop</h2>
+          <p>Bạn có thể mua sắm hàng hóa với giá cả phải chăng nhất tại đây</p>";
+        }else{
+          $username = $_SESSION["user"]["username"];
+          echo "<h2>Chào mừng quay trở lại, $username</h2>
+          <p>Bạn có thể mua sắm hàng hóa với giá cả phải chăng nhất tại đây</p>";
+        }
+      ?>
     </div>
 
     <!-- Load random products -->
@@ -95,19 +104,23 @@
   </div>
 
   <!-- Account -->
-  <div class="accounts">
-    <h1>Bắt đầu với Phatcraft Shop</h1>
-    <div class="account-list">
-      <div class="account">
-        <i class="bi bi-person-lock"></i>
-        <p>Đăng nhập tài khoản tại <a href="">đây</a></p>
+  <?php
+    if(empty($_SESSION["user"])){
+      echo "<div class='accounts'>
+      <h1>Bắt đầu với Phatcraft Shop</h1>
+      <div class='account-list'>
+        <div class='account'>
+          <i class='bi bi-person-lock'></i>
+          <p>Đăng nhập tài khoản tại <a href='./login.php'>đây</a></p>
+        </div>
+        <div class='account'>
+          <i class='bi bi-person-plus'></i>
+          <p>Tạo tài khoản mới tại <a href='./signup.php'>đây</a></p>
+        </div>
       </div>
-      <div class="account">
-        <i class="bi bi-person-plus"></i>
-        <p>Tạo tài khoản mới tại <a href="./signup.php">đây</a></p>
-      </div>
-    </div>
-  </div>
+    </div>";
+    }
+  ?>
 
   <!-- Footer -->
   <footer>
