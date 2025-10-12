@@ -185,12 +185,17 @@ footer p{
   border: 1px solid black;
   padding: 7px;
   border-radius: 10px;
+  text-align: left;
+}
+.main-form form .final{
+  margin-bottom: 0px;
 }
 .main-form form input{
   border: 0;
   outline: 0;
   padding: 5px;
   border-radius: 10px;
+  margin: 0px 10px;
 }
 .main-form form p a{
   color: black;
@@ -201,4 +206,49 @@ footer p{
   padding: 10px 40px;
   margin: 10px 0px;
   border-radius: 10px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.main-form form .input i{
+  width: 10px;
+}
+
+/* Password checkbox and icon */
+.show-password #password,
+.show-password #confirm-password,
+.show-password #eye-slash-confirm,
+.show-password #eye-slash-password{
+  display: none;
+}
+.show-password #password:checked ~ #eye-password,
+.show-password #confirm-password:checked ~ #eye-confirm{
+  display: none;
+}
+.show-password #password:checked ~ #eye-slash-password,
+.show-password #confirm-password:checked ~ #eye-slash-confirm{
+  display: inline;
+}
+
+
+
+/* Account info */
+.main-account{
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+}
+.main-account .account-info{
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  width: 300px;
+}
+.main-account .account-info h2{
+  font-size: 30px;
+  margin: 10px 0px;
+}
+.main-account .account-info p label{
+  width: 50px;
+  display: inline-block;
+  text-align: right;
+  margin-right: 7px;
 }
