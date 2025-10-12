@@ -4,7 +4,7 @@
   include "./database.php";
   session_start();
   if(!empty($_SESSION["user"])){
-    header("Location: index.php");
+    echo "<script>location.replace('/')</script>";
     exit();
   }
 ?>
@@ -37,15 +37,25 @@
       </div>
       <div class="input">
         <i class="bi bi-key-fill"></i>
-        <input type="password" name="password" placeholder="Mật khẩu" required>
+        <input type="password" name="password" placeholder="Mật khẩu" required id="password-input">
+        <label class="show-password">
+          <input type="checkbox" id="password">
+          <i class="bi bi-eye" id="eye-password"></i>
+          <i class="bi bi-eye-slash" id="eye-slash-password"></i>
+        </label>
       </div>
-      <div class="input">
+      <div class="input final">
         <i class="bi bi-key-fill"></i>
-        <input type="password" name="confirm-password" placeholder="Xác nhận mật khẩu" required>
+        <input type="password" name="confirm-password" placeholder="Xác nhận mật khẩu" required id="confirm-password-input">
+        <label class="show-password">
+          <input type="checkbox" id="confirm-password">
+          <i class="bi bi-eye" id="eye-confirm"></i>
+          <i class="bi bi-eye-slash" id="eye-slash-confirm"></i>
+        </label>
       </div>
 
       <input type="submit" value="Đăng ký" name="submit">
-      <p>Đã có tài khoản? Đăng nhập tại <a href="">đây</a></p>
+      <p>Đã có tài khoản? Đăng nhập tại <a href="./login.php">đây</a></p>
     </form>
 
     <!-- Xử lý form -->
@@ -60,7 +70,7 @@
         if($password != $confirm_password){
           echo "<script>alert('Mật khẩu và xác nhận mật khẩu không khớp. Vui lòng thử lại')</script>";
         }else{
-          $userID = random_bytes(16);
+          $userID = substr(str_shuffle("0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"), 0, 16);
           $hash_password = password_hash($password, PASSWORD_BCRYPT);
 
           $sql = "INSERT INTO users(userID, username, email, password)
@@ -77,6 +87,9 @@
       }
     ?>
   </main>
+
+  <!-- Load script -->
+  <script src="./scripts/show-password.js"></script>
 
 </body>
 </html>
