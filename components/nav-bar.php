@@ -10,7 +10,7 @@
       <a href="" class="<?php if($page == "shop") echo 'choose'; else echo 'normal' ?>" title="Cửa hàng">
         <i class="bi bi-bag-fill"></i>
       </a>
-      <a href="" class="<?php if($page == "account") echo 'choose'; else echo 'normal' ?>" title="Tài khoản">
+      <a href="/login.php" class="<?php if($page == "account") echo 'choose'; else echo 'normal' ?>" title="Tài khoản">
         <i class="bi bi-person-fill"></i>
       </a>
       <a href="" class="<?php if($page == "cart") echo 'choose'; else echo 'normal' ?> cart" title="Giỏ hàng">
