@@ -8,8 +8,9 @@ Phatcraft Shop là 1 project về 1 trang web shop bán hàng của tôi.\
 > [!CAUTION]
 > Yêu cầu tối thiểu: `php >= 8.2', 'mysql >= 15.1'
 
-  + ### Tạo database `phatcraft_shop` và thêm các bảng và dữ liệu
+  + ### Export file `phatcraft_shop.sql` vào `mysql`
   ````bash
+  $ mysql -u <username> -p < phatcraft_shop.sql
   ````
 
   + ### Chạy server
