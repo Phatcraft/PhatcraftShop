@@ -1,7 +1,7 @@
 <?php
   include "./database.php";
   session_start();
-  if(empty($_SESSION["user"])) echo "<script>location.replace('/')</script>";
+  if(empty($_SESSION["user"])) echo "<script>location.replace('/login.php')</script>";
 ?>
 
 <!DOCTYPE html>

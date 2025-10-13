@@ -4,7 +4,7 @@
   include "./database.php";
   session_start();
   if(!empty($_SESSION["user"])){
-    echo "<script>location.replace('/')</script>";
+    echo "<script>location.replace('/account.php')</script>";
     exit();
   }
 ?>
