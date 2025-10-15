@@ -7,7 +7,7 @@
       <a href="/" class="<?php if($page == "home") echo 'choose'; else echo 'normal' ?>" title="Trang chủ">
         <i class="bi bi-house-fill"></i>
       </a>
-      <a href="" class="<?php if($page == "shop") echo 'choose'; else echo 'normal' ?>" title="Cửa hàng">
+      <a href="/products" class="<?php if($page == "shop") echo 'choose'; else echo 'normal' ?>" title="Cửa hàng">
         <i class="bi bi-bag-fill"></i>
       </a>
       <a href="/account.php" class="<?php if($page == "account") echo 'choose'; else echo 'normal' ?>" title="Tài khoản">
