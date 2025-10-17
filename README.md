@@ -10,11 +10,6 @@ Trang web được viết chủ yếu bằng PHP.
 > [!CAUTION]
 > Yêu cầu tối thiểu: `php >= 8.2', 'mysql >= 15.1'
 
-  + #### *Export file `phatcraft_shop.sql` vào `mysql`*
-  ````bash
-  $ mysql -u <username> -p < phatcraft_shop.sql
-  ````
-
   + #### *Chạy server*
   ````bash
   $ php -S <host>:<port>
