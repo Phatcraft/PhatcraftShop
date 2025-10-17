@@ -1,0 +1,38 @@
+nav{
+  background-color: var(--primary);
+  color: white;
+  padding: 10px;
+  text-align: center;
+  padding-bottom: 0px;
+}
+nav h1{
+  margin: 0;
+}
+nav .nav-list{
+  display: flex;
+  justify-content: center;
+}
+nav .nav-list a{
+  margin: 0px 15px;
+  color: white;
+  position: relative;
+  display: flex;
+  text-decoration: none;
+  padding: 10px;
+}
+nav .nav-list .choose{
+  border-bottom: 5px solid white;
+}
+nav .nav-list a i{
+  font-size: 25px;
+}
+nav .nav-list a .badge{
+  background-color: red;
+  font-size: 12px;
+  padding: 2px 5px;
+  height: fit-content;
+  border-radius: 10px;
+  position: absolute;
+  left: 60%;
+  top: 5px;
+}

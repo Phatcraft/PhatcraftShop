@@ -1,0 +1,7 @@
+@import url("../resources/css/nav-bar.css");
+@import url("../resources/css/variables.css");
+
+body{
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
