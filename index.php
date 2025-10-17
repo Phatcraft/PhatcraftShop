@@ -13,5 +13,12 @@
     $cart_amount = 0;
     include "./resources/components/nav-bar.php";
   ?>
+
+  <main>
+    <div class="welcome-page">
+      <h2>Chào mừng đến với Phatcraft Shop</h2>
+      <p>Bạn có thể mua các sản phẩm tại đây với giá cả phải chăng nhất</p>
+    </div>
+  </main>
 </body>
 </html>
