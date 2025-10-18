@@ -8,7 +8,7 @@ Trang web được viết chủ yếu bằng PHP.
 # Setup cơ bản
   + #### *Cài đặt PHP, MySQL*
 > [!CAUTION]
-> Yêu cầu tối thiểu: `php >= 8.2', 'mysql >= 15.1'
+> Yêu cầu tối thiểu: `php >= 8.2'
 
   + #### *Chạy server*
   ````bash
